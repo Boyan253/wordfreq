@@ -22,3 +22,12 @@ def test_stopwords_are_removed_by_default():
 def test_keeping_stopwords():
     pairs = dict(wordfreq.count("the the cat", use_stopwords=False))
     assert pairs["the"] == 2
+
+
+def test_bigrams():
+    pairs = dict(wordfreq.count("red car red car", n=2, use_stopwords=False))
+    assert pairs["red car"] == 2
+
+def test_bar_scales_to_the_biggest():
+    assert len(wordfreq.bar(10, 10, width=10)) == 10
+    assert len(wordfreq.bar(5, 10, width=10)) == 5
