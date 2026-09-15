@@ -6,6 +6,8 @@ import re
 import sys
 from collections import Counter
 
+__version__ = "0.1.0"
+
 WORD = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)?", re.UNICODE)
 
 STOPWORDS = {
@@ -55,6 +57,8 @@ def render(pairs, width=30):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--version", action="version",
+                    version="%(prog)s " + __version__)
     ap.add_argument("files", nargs="*", help="text files, or nothing to read stdin")
     ap.add_argument("-n", "--top", type=int, default=20)
     ap.add_argument("--ngram", type=int, default=1, help="1=words, 2=bigrams, ...")
