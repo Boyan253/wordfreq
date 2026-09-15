@@ -28,3 +28,12 @@ rollback    8  ######
 ```
 
 `--csv` switches to `word,count` for a spreadsheet.
+
+## Options
+
+| flag | effect |
+|------|--------|
+| `--ngram 2` | count two-word phrases instead of single words |
+| `--keep-stopwords` | include `the`, `and`, `of`, … |
+| `--min-length 4` | ignore short words |
+| `--width 50` | wider bars |
