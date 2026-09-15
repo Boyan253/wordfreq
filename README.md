@@ -17,3 +17,14 @@ python wordfreq.py tickets.txt --ngram 2          # bigrams
 python wordfreq.py notes.txt --csv > freq.csv
 cat article.txt | python wordfreq.py --min-length 4
 ```
+
+## Output
+
+```
+deploy     42  ##############################
+pipeline   31  ######################
+staging    19  #############
+rollback    8  ######
+```
+
+`--csv` switches to `word,count` for a spreadsheet.
