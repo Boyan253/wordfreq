@@ -37,3 +37,9 @@ rollback    8  ######
 | `--keep-stopwords` | include `the`, `and`, `of`, … |
 | `--min-length 4` | ignore short words |
 | `--width 50` | wider bars |
+
+## Tokenizing
+
+Words are Unicode letter runs, so accented text works; digits and underscores
+are not words. Internal apostrophes are kept, so `don't` stays one token.
+A small built-in English stopword list is applied by default.
