@@ -43,3 +43,10 @@ rollback    8  ######
 Words are Unicode letter runs, so accented text works; digits and underscores
 are not words. Internal apostrophes are kept, so `don't` stays one token.
 A small built-in English stopword list is applied by default.
+
+## Tests
+
+```
+pip install pytest
+pytest
+```
